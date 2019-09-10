@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>angular-demo5-内置服务$http</title>
+<script src="angular.min.js"></script>
+<script>
+	//建立模块
+	var app=angular.module('MyApp', []);
+	//建立控制器
+	app.controller("myController",function($scope,$http){
+	$scope.findList=function(){
+		//调用$http服务获取请求路径里的返回参数,在实际应用中demo.json应改为实际方法的路径
+		$http.get("demo.json").success(
+			function(response){
+				$scope.list=response;
+			}	
+		);
+	}
+	$scope.findList();
+}); 
+	
+</script>
+</head>
+<body ng-app='MyApp' ng-controller="myController">
+<table>
+	<tr>
+		<td>姓名</td>
+		<td>数学</td>
+		<td>语文</td>
+		
+	</tr>
+	<tr ng-repeat="entity in list">
+		<td>{{entity.name}}</td>
+		<td>{{entity.math}}</td>
+		<td>{{entity.yuwen}}</td>
+	</tr>
+</table>	
+</body>
+</html>

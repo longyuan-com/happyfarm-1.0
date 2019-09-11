@@ -1,0 +1,229 @@
+.headerttt{
+	background: #fff;
+    border-bottom: 1px solid #DEDEDE;
+    height: 31px;
+    z-index: 99;
+    width: 99%;
+    margin-top: -5px;
+}
+.headertop{
+	height: 29px;
+    line-height: 35px;
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    background: #fff;
+    font-size: 82%;
+    
+}
+.loginbar { 
+	position:absolute;
+	 right:0; 
+	top:0px;
+}
+.fl {
+    float: left;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+.tell {
+    background: url(tel.jpg) no-repeat 0 2px;
+    padding-left: 31px;
+    font-size: 14px;
+    color: #666;
+}
+.topmenu {
+    padding-left: 8px;
+    font-weight: inherit;
+    font-style: normal;
+    font-size: 98%;
+}
+.fr {
+    float: right;
+}
+.headerbg {
+    height: 99px;
+    z-index: 98;
+    position: relative;
+    background: #fff;
+    width: 100%;
+    margin-top: -30px;
+}
+.headerInfo {
+    height: 99px;
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    background: #fff;
+}
+.logo {
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+.tangmenubg {
+    background: #F2F2F2;
+    border-bottom: 1px solid #E5E5E5;
+    height: 63px;
+    position: relative;
+    z-index: 97;
+    width: 100%;
+}
+.tangmenu {
+    height: 63px;
+    position: relative;
+    width: 1200px;
+}
+.AllWrap {
+    margin: 0 auto;
+    width: 1200px;
+}
+.tangnav {
+    position: absolute;
+    left: 150px;
+    top: 8px;
+}
+.MenuList {
+    line-height: 18px;
+}
+.MenuList li {
+    float: left;
+    font-size: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+}
+.MenuList li a {
+    float: left;
+    display: block;
+    color: #333;
+    padding: 16px 22px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+}
+.new {
+    position: absolute;
+    left: 1129px;
+    top: 0;
+    width: 36px;
+    height: 23px;
+    background: url(new.png) no-repeat;
+}
+.qingqb {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 150px;
+    height: 48px;
+    list-style: none;
+}
+#sddm {
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+    width: 150px;
+    height: 48px;
+}
+#sddm li.lii {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 48px;
+}
+#sddm li a.qian {
+    background: url(qian.png) no-repeat 130px 27px;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+#sddm li a.qian{
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    width: 120px;
+    line-height: 63px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 63px;
+    overflow: hidden;
+    color: #333;
+    padding-left: 60px;
+    font-family: "Microsoft YaHei";
+}
+.tangfl {
+    float: left;
+}
+.tangfr {
+    float: right;
+}
+.geli{
+	margin-top: 20px;
+}
+<!-- 搜索框 -->
+.searchbar {
+    position: absolute;
+    left: 320px;
+    top: 30px;
+}
+.SearchBar {
+    padding: 0px;
+    width: 474px;
+    height: 36px;
+    background: url(ss.gif) no-repeat;
+    margin-bottom: 3px;
+}
+table, td, th {
+    vertical-align: top;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.SearchBar table td {
+    padding: 0 5px;
+    vertical-align: middle;
+}
+table, td, th {
+    vertical-align: top;
+}
+ #box{
+        width: 380px;
+        height: 68px;
+        margin: 30px auto;
+        font-family: 'Microsoft YaHei';
+        font-size: 14px;
+    }
+#search1{
+     width: 260px;
+     border: 1px solid #e2e2e2;
+     height: 30px;
+     float: left;
+     background-image: url(search.jpg);
+     background-repeat: no-repeat;
+     background-size: 25px;
+     background-position:5px center;
+     padding:0 0 0 40px;
+     margin-top: 40px;
+    }
+#search{
+        width: 70px;
+        height: 32px;
+        float: right;
+        background: green;
+        color: white;
+        text-align: center;
+        line-height: 32px;
+        cursor: pointer;
+        margin-top: 40px;
+        border: none;
+    }

@@ -1,6 +1,10 @@
-/.settings/
+.idea
+.metadata
+.settings
 /target/
-/.classpath
-/.project
-/.springBeans
-/.tern-project
+/RemoteSystemsTempFiles/
+.classpath
+.project
+.springBeans
+.tern-project
+happy-farm.iml

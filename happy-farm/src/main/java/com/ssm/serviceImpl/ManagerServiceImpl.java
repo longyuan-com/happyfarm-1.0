@@ -1,24 +1,23 @@
 package com.ssm.serviceImpl;
 
-
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ssm.dao.ManagerDao;
-import com.ssm.entity.Manager;
+import com.ssm.entity.HappyFarmManager;
+import com.ssm.mapper.HappyFarmManagerMapper;
 import com.ssm.service.ManagerService;
 
-@Service("ManagerService")
+@Service
 public class ManagerServiceImpl implements ManagerService {
 
 	@Autowired
-	private ManagerDao md;
+	private HappyFarmManagerMapper happyFarmManagerMapper;
 	@Override
-	public Manager login(Map<String,String> map) {
+	public HappyFarmManager login(Map<String,String> map) {
 	
-		return md.login(map);
+		return  happyFarmManagerMapper.selectManger(map);
 	}
 
 }

@@ -25,6 +25,10 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/BufferImage")
 public class BufferImage extends HttpServlet {
  
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	// 集合中保存所有成语
 	private List<String> words = new ArrayList<String>();
  

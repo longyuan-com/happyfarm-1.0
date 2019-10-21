@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.landOrderMapper">
+  <resultMap id="BaseResultMap" type="com.ssm.entity.landCart">
+  
+		<association property="orderforBuyer" javaType="com.ssm.entity.OrderforBuyer">
+		    <id column="id" jdbcType="INTEGER" property="id" />
+		    <result column="orderId" jdbcType="VARCHAR" property="orderid" />
+		    <result column="userId" jdbcType="INTEGER" property="userid" />
+		    <result column="productId" jdbcType="VARCHAR" property="productid" />
+		    <result column="goodNumber" jdbcType="INTEGER" property="goodnumber" />
+		    <result column="addressId" jdbcType="INTEGER" property="addressid" />
+		    <result column="orderStatus" jdbcType="INTEGER" property="orderstatus" />
+		    <result column="orderTime" jdbcType="TIMESTAMP" property="ordertime" />
+		    <result column="userphone" jdbcType="INTEGER" property="userphone" />
+		</association>
+		
+			<association property="happyFarmLandinfo" javaType="com.ssm.entity.HappyFarmLandinfo">
+			<id column="landID" jdbcType="INTEGER" property="landid" />
+		    <result column="landName" jdbcType="VARCHAR" property="landname" />
+		    <result column="landPrice" jdbcType="DOUBLE" property="landprice" />
+		    <result column="landImg" jdbcType="VARCHAR" property="landimg" />
+		    <result column="landMs" jdbcType="VARCHAR" property="landms" />
+		    <result column="landArea" jdbcType="VARCHAR" property="landarea" />
+		    <result column="landDate" jdbcType="DATE" property="landdate" />
+		    <result column="landSize" jdbcType="VARCHAR" property="landsize" />
+		    <result column="status" jdbcType="INTEGER" property="status" />
+		</association>
+  
+		<association property="happyFarmUser" javaType="com.ssm.entity.HappyFarmUser">
+			<id column="id" jdbcType="INTEGER" property="id" />
+		    <result column="username" jdbcType="VARCHAR" property="username" />
+		    <result column="password" jdbcType="VARCHAR" property="password" />
+		</association>
+		<association property="happyFarmSeller" javaType="com.ssm.entity.HappyFarmSeller">
+				    <id column="id" jdbcType="INTEGER" property="id" />
+				    <result column="name" jdbcType="VARCHAR" property="name" />
+				    <result column="password" jdbcType="VARCHAR" property="password" />
+		</association>
+	
+		<association property="orderforSeller" javaType="com.ssm.entity.OrderforSeller">
+		    <id column="id" jdbcType="INTEGER" property="id" />
+			<result column="orderId" jdbcType="VARCHAR" property="orderid" />
+			<result column="deliveryStatus" jdbcType="INTEGER" property="deliverystatus" />
+			<result column="logisticsId" jdbcType="INTEGER" property="logisticsid" />
+		</association>
+
+		<association property="logistics" javaType="com.ssm.entity.Logistics">
+		    <id column="logisticsId" jdbcType="INTEGER" property="logisticsid" />
+		    <result column="logisticsName" jdbcType="VARCHAR" property="logisticsname" />
+	</association>
+	<association property="address" javaType="com.ssm.entity.Address">
+		    	 <id column="addressId" jdbcType="INTEGER" property="addressid" />
+    			<result column="addressName" jdbcType="VARCHAR" property="addressname" />
+	</association>
+
+  </resultMap>
+  <select id="seletOrderAll" resultMap="BaseResultMap">
+  		SELECT
+  		*
+		from orderfor_buyer
+		join happy_farm_landinfo on orderfor_buyer.productId=happy_farm_landinfo.landID
+		join happy_farm_user on happy_farm_user.id=orderfor_buyer.userId
+		join orderfor_seller on orderfor_seller.orderId=orderfor_buyer.orderId
+		join happy_farm_seller on happy_farm_seller.id=orderfor_seller.id
+		join address on orderfor_buyer.addressId=address.addressId
+		join logistics on logistics.logisticsId=orderfor_seller.logisticsId;
+  </select>
+  
+
+</mapper>

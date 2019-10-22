@@ -1,0 +1,10 @@
+.idea
+.metadata
+.settings
+/target/
+/RemoteSystemsTempFiles/
+.classpath
+.project
+.springBeans
+.tern-project
+happy-farm.iml

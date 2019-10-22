@@ -1,14 +1,25 @@
 package com.ssm.controller;
 
 import java.util.HashMap;
+<<<<<<< HEAD:src/main/java/com/ssm/controller/ManagerController.java
+=======
+
+>>>>>>> 78f393aefee109a14bf7b17783eee2d96946f05a:happy-farm/src/main/java/com/ssm/controller/ManagerController.java
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+<<<<<<< HEAD:src/main/java/com/ssm/controller/ManagerController.java
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+=======
+/*import org.apache.jasper.tagplugins.jstl.core.Out;*/
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+>>>>>>> 78f393aefee109a14bf7b17783eee2d96946f05a:happy-farm/src/main/java/com/ssm/controller/ManagerController.java
 import com.ssm.entity.HappyFarmManager;
 import com.ssm.service.ManagerService;
 

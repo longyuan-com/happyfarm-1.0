@@ -1,0 +1,16 @@
+#wrapper{
+	width: 981;
+	margin-left: 558px;
+    margin-top: 10px;
+}
+#content{
+	width: 481px;
+    margin-left: 350;
+    margin-right: auto;
+    margin-top: 0px;
+}
+#foot{
+	margin-left:120px;
+    color: #7a77c8;
+    margin-top: 40px;
+}
